@@ -1,0 +1,55 @@
+/* hoja de estilos */
+body {
+    background: #4b6cb7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #182848, #4b6cb7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #182848, #4b6cb7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h1{
+    font-family: 'Carrois Gothic SC', sans-serif;
+    text-align: center;
+    color: white;
+}
+
+
+.tarjeta {
+    background-color: #acff38; 
+    border: 1px solid #454545; 
+    width: 300px; 
+    height: 200px;
+    margin: 1rem; 
+}
+
+.titulo{
+    text-align: center;
+    font-size: 1rem;
+    color: #000000;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+@media (min-width: 768px){
+    .contenedor-padre {
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 1rem;
+    }
+
+    .tarjeta {
+        width: 320px; 
+    }
+
+}
+
+
+@media (min-width: 1024px){
+    .contenedor-padre {
+        grid-template-columns: auto auto auto;
+    }
+
+    .tarjeta {
+        width: 400px; 
+    }
+
+}

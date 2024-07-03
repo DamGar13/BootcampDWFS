@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calculadora Basica</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<h1>Calculadora Básica en JAVASCRIPT</h1>
+	<hr>
+	<div class="formulario">
+		<form name="formcalculator" id="formcalculator" action="javascript:enviar()" method="post">
+			<div class="celdas">
+				<div class="celda">
+					<label for="">Numero 1</label>
+				</div>
+				<div class="celda">
+					<input type="text" name="number1" id="number1">
+				</div>
+				<div class="celda">
+					<label for="">Operación</label>
+				</div>
+				<div class="celda">
+					<select name="operator" id="operator">
+						<option value="">Seleccionar...</option>
+						<option value="suma">+</option>
+						<option value="resta">-</option>
+						<option value="multip">*</option>
+						<option value="divi">/</option>
+					</select>
+				</div>
+				<div class="celda">
+					<label for="">Numero 2</label>
+				</div>
+				<div class="celda">
+					<input type="text" name="number2" id="number2">
+				</div>
+				<div class="combinada">
+					<input class="boton" type="reset" value="Limpiar">
+					<input class="boton" type="submit" value="Enviar">
+				</div>
+			</div>
+		</form>
+		<script>
+			function enviar(){
+				let num1 = Number(document.getElementById('number1').value);
+				let num2 = Number(document.getElementById('number2').value);
+				let oprt = document.getElementById('operator').value;
+				let result = 0
+				console.log(num1);
+				console.log(num2);
+				console.log(oprt);
+				if(oprt === "suma"){
+					result = (num1 + num2);
+				}else if(oprt === "resta"){
+					result = num1 - num2;
+				}else if(oprt === "multip"){
+					result = num1 * num2;
+				}else if(oprt === "divi"){
+					result = num1 / num2;
+				}else{
+					alert("debe seleccionar una operacion")
+				}
+				alert('el resultado es: ' + result)
+			}
+			/*function enviar(){
+				let num1 = Number(document.getElementById('number1').value);
+				let num2 = Number(document.getElementById('number2').value);
+				let oper = document.getElementById('operator').value;
+				let result = 0;
+				switch(oper){
+					case 'suma':
+						result = num1 + num2;
+						alert('el resultado es : '+ result);
+					break;
+					case 'resta':
+						result = num1 - num2;
+						alert('el resultado es : '+ result);
+					break;
+					case 'multi':
+						result = num1 * num2;
+						alert('el resultado es : '+ result);
+					break;
+					case 'divi':
+						result = num1 / num2;
+						alert('el resultado es : '+ result);
+					break;
+				}						
+			}*/
+		</script>
+	</div>
+</body>
+</html>
+
+<!--<form name="formcalculator" action="javascript:enviar()" method="post">
+					<table border="1" align="center" width="30%">
+						<tr>
+							<td>Número 1</td>
+							<td><input type="number" name="number1" id="number1"></td>
+						</tr>
+						<tr>
+							<td>Operación</td>
+							<td>
+								<select name="operator" id="operator">
+									<option value="">Seleccionar...</option>
+									<option value="suma">+</option>
+									<option value="resta">-</option>
+									<option value="multi">*</option>
+									<option value="divi">
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>Número 2</td>
+							<td><input type="number" name="number2" id="number2"></td>
+						</tr>
+						<tr>
+							<td colspan="2" align="center">
+								<input type="reset" value="Limpiar">
+								<input type="submit" value="Enviar">
+							</td>
+						</tr>
+					</table>
+				</form>-->

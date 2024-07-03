@@ -1,0 +1,72 @@
+body {
+    background: #4b6cb7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #182848, #4b6cb7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #182848, #4b6cb7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Carrois Gothic SC', sans-serif;
+    display: block;
+    text-align: center;
+    line-height:.8;
+    color: white;
+}
+
+h1, p{
+    font-family: 'Carrois Gothic SC', sans-serif;
+    display: block;
+    text-align: center;
+    line-height:.8;
+    color: white;
+}
+
+.contenido {
+    max-width: 1200px;
+    margin: 5rem auto 0 auto;
+    color: white;
+    font-size: 3rem;
+    font-family: 'Carrois Gothic SC', sans-serif;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+.formulario{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.celdas{
+    text-align: left;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 30% auto;
+    grid-template-rows: auto auto auto auto;
+    column-gap: 1rem;
+    border: 1px solid #000000;
+    border-radius: 5%;
+}
+
+.celda{
+    margin-bottom: 1rem;
+}
+
+.combinada{
+    text-align: center;
+    grid-column: 1 / span 2;
+}
+
+.boton{
+    width: 8rem;
+}
+
+.tabla{
+    background: #4b6cb7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1199ee, #4b6cb7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1199ee, #4b6cb7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Carrois Gothic SC', sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    line-height:.8;
+    color: white;
+
+}
