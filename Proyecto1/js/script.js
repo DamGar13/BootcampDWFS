@@ -46,13 +46,27 @@ formulario.addEventListener("submit",function(evento){
         mostrarError ("Debe diligenciar todos los campos");
         return; //corta la ejecucion del codigo
     }
+    mostrarMensaje("Datos enviados correctamente")
+
+    function mostrarMensaje(mensaje){
+        let alerta = document.createElement("div");//crea una nueva etiqueta ("div")
+        alerta.textContent = mensaje//crea un mensaje en la etiqueta creada
+        alerta.classList.add("correcto")//adiciona una clase a la etiqueta creada
+        formulario.appendChild(alerta);//adiciona la clase hijo al final de la etiqueta padre
+        setTimeout(() => {
+            alerta.remove();
+        }, 3000)
+    }
 
     function mostrarError(mensaje){
         //console.log(mensaje)
-        let error = document.createElement("div");
-        error.textContent = mensaje;
-        error.classList.add("error")
+        let error = document.createElement("div");//crea una nueva etiqueta ("div")
+        error.textContent = mensaje;//crea un mensaje en la etiqueta creada
+        error.classList.add("error")//adiciona una clase a la etiqueta creada
         //console.log(error);
-        formulario.appendChild(error);
+        formulario.appendChild(error);//adiciona la clase hijo al final de la etiqueta padre
+        setTimeout(() => {
+            error.remove();
+        }, 3000)
     }
 })
